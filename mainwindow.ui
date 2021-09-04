@@ -1,0 +1,1033 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1014</width>
+    <height>642</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QWidget" name="widget_title" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1011</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(68,114,196)</string>
+    </property>
+    <widget class="QLabel" name="lab_logo">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>300</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="myResource.qrc">:/newPrefix/resource/logo2.png</pixmap>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lab_divide">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>75</y>
+       <width>1024</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgb(47, 85, 151)</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lab_title">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>0</y>
+       <width>351</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 18pt &quot;微软雅黑&quot; ;color:white;</string>
+     </property>
+     <property name="text">
+      <string>电机在线监测系统</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QWidget" name="widget_2" native="true">
+     <property name="geometry">
+      <rect>
+       <x>570</x>
+       <y>0</y>
+       <width>374</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <widget class="QPushButton" name="btn_online">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>10</y>
+        <width>60</width>
+        <height>60</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>在线监控</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_video">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>10</y>
+        <width>60</width>
+        <height>60</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>视频监控</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_alarm">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>10</y>
+        <width>60</width>
+        <height>60</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>报警监控</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_check">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>10</y>
+        <width>60</width>
+        <height>60</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>检修管理</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget_main">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>100</y>
+      <width>861</width>
+      <height>540</height>
+     </rect>
+    </property>
+    <widget class="QWidget" name="widget_main">
+     <widget class="QTextBrowser" name="textBrowser">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>310</y>
+        <width>581</width>
+        <height>231</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">     QPushButton{
+     background-color:rgba(112,173,71,200);
+     border-style:outset;
+     border-width:4px;
+     border-radius:10px;
+     border-color:rgba(255,255,255,30);
+     font:bold 20px;
+     color:rgba(0,0,0,200);
+     padding:6px;
+     }
+
+     QPushButton:pressed{
+     background-color:rgba(112,173,71,200);
+     border-color:rgba(255,255,255,30);
+     border-style:inset;
+     color:rgba(0,0,0,200);
+     }
+
+     QPushButton:hover{
+     background-color:rgba(112,173,71,200);
+     border-color:rgba(255,255,255,200);
+     color:rgba(0,0,0,100);
+     }</string>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'等线'; font-size:12pt; color:#000000;&quot;&gt;运行日志：&lt;/span&gt;&lt;span style=&quot; font-family:'SimSun'; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt; color:#000000;&quot;&gt;[20:00:00]&lt;/span&gt;&lt;span style=&quot; font-family:'等线'; font-size:12pt; color:#000000;&quot;&gt;运行正常&lt;/span&gt;&lt;span style=&quot; font-family:'SimSun'; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt; color:#000000;&quot;&gt;[20:01:00]&lt;/span&gt;&lt;span style=&quot; font-family:'等线'; font-size:12pt; color:#000000;&quot;&gt;运行正常&lt;/span&gt;&lt;span style=&quot; font-family:'SimSun'; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt; color:#000000;&quot;&gt;[20:02:00]&lt;/span&gt;&lt;span style=&quot; font-family:'等线'; font-size:12pt; color:#000000;&quot;&gt;运行正常&lt;/span&gt;&lt;span style=&quot; font-family:'SimSun'; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt; color:#000000;&quot;&gt;[20:03:00]&lt;/span&gt;&lt;span style=&quot; font-family:'等线'; font-size:12pt; color:#000000;&quot;&gt;运行正常&lt;/span&gt;&lt;span style=&quot; font-family:'SimSun'; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt; color:#000000;&quot;&gt;[20:05:00]&lt;/span&gt;&lt;span style=&quot; font-family:'等线'; font-size:12pt; color:#000000;&quot;&gt;检测到故障，待处理&lt;/span&gt;&lt;span style=&quot; font-family:'SimSun'; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt; color:#000000;&quot;&gt;[20:06:00]&lt;/span&gt;&lt;span style=&quot; font-family:'等线'; font-size:12pt; color:#000000;&quot;&gt;已停机&lt;/span&gt;&lt;span style=&quot; font-family:'SimSun'; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt; color:#000000;&quot;&gt;[20:07:00]&lt;/span&gt;&lt;span style=&quot; font-family:'等线'; font-size:12pt; color:#000000;&quot;&gt;已停机&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt; color:#000000;&quot;&gt;[20:08:00]&lt;/span&gt;&lt;span style=&quot; font-family:'等线'; font-size:12pt; color:#000000;&quot;&gt;已停机&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt; color:#000000;&quot;&gt;[20:09:00]&lt;/span&gt;&lt;span style=&quot; font-family:'等线'; font-size:12pt; color:#000000;&quot;&gt;已停机&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt; color:#000000;&quot;&gt;[20:10:00]&lt;/span&gt;&lt;span style=&quot; font-family:'等线'; font-size:12pt; color:#000000;&quot;&gt;已停机&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'SimSun'; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="widget_status" native="true">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>0</y>
+        <width>281</width>
+        <height>311</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:1px solid rgb(0,0,0) </string>
+      </property>
+      <widget class="QTextBrowser" name="text_status">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>240</y>
+         <width>231</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:none;</string>
+       </property>
+       <property name="verticalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="horizontalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="html">
+        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'等线'; color:#000000;&quot;&gt;编号：&lt;/span&gt;&lt;span style=&quot; font-family:'Calibri'; color:#000000;&quot;&gt;001&lt;/span&gt;&lt;span style=&quot; font-family:'SimSun';&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'等线'; color:#000000;&quot;&gt;运行状态：运行故障&lt;/span&gt;&lt;span style=&quot; font-family:'SimSun';&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'等线'; color:#000000;&quot;&gt;故障类型：断路&lt;/span&gt;&lt;span style=&quot; font-family:'SimSun';&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'等线'; color:#000000;&quot;&gt;处理情况：待处理&lt;/span&gt;&lt;span style=&quot; font-family:'SimSun';&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lab_pic">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>20</y>
+         <width>281</width>
+         <height>211</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:none</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>:/newPrefix/resource/open_Y22.png</pixmap>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lab_pic_title">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>281</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:none;
+font: 9pt &quot;微软雅黑&quot;;</string>
+       </property>
+       <property name="text">
+        <string>  </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="widget_button" native="true">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>310</y>
+        <width>281</width>
+        <height>231</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:1px solid rgb(0,0,0) </string>
+      </property>
+      <widget class="QPushButton" name="btn_importlog">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>171</y>
+         <width>158</width>
+         <height>48</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">     QPushButton{
+     background-color:rgba(68,114,196);
+     border-style:outset;
+     border-width:4px;
+     border-radius:10px;
+     border-color:rgba(255,255,255,30);
+     font:bold 20px;
+     color:rgba(0,0,0,200);
+     padding:6px;
+     }
+
+     QPushButton:pressed{
+     background-color:rgba(68,114,196);
+     border-color:rgba(255,255,255,30);
+     border-style:inset;
+     color:rgba(0,0,0,200);
+     }
+
+     QPushButton:hover{
+     background-color:rgba(68,114,196);
+     border-color:rgba(255,255,255,200);
+     color:rgba(0,0,0,100);
+     }</string>
+       </property>
+       <property name="text">
+        <string>日志导出</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_start">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>10</y>
+         <width>158</width>
+         <height>48</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">     QPushButton{
+     background-color:rgba(68,114,196);
+     border-style:outset;
+     border-width:4px;
+     border-radius:10px;
+     border-color:rgba(255,255,255,30);
+     font:bold 20px;
+     color:rgba(0,0,0,200);
+     padding:6px;
+     }
+
+     QPushButton:pressed{
+     background-color:rgba(68,114,196);
+     border-color:rgba(255,255,255,30);
+     border-style:inset;
+     color:rgba(0,0,0,200);
+     }
+
+     QPushButton:hover{
+     background-color:rgba(68,114,196);
+     border-color:rgba(255,255,255,200);
+     color:rgba(0,0,0,100);
+     }</string>
+       </property>
+       <property name="text">
+        <string>启动</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_faultdeal">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>118</y>
+         <width>158</width>
+         <height>47</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">     QPushButton{
+     background-color:rgba(68,114,196);
+     border-style:outset;
+     border-width:4px;
+     border-radius:10px;
+     border-color:rgba(255,255,255,30);
+     font:bold 20px;
+     color:rgba(0,0,0,200);
+     padding:6px;
+     }
+
+     QPushButton:pressed{
+     background-color:rgba(68,114,196);
+     border-color:rgba(255,255,255,30);
+     border-style:inset;
+     color:rgba(0,0,0,200);
+     }
+
+     QPushButton:hover{
+     background-color:rgba(68,114,196);
+     border-color:rgba(255,255,255,200);
+     color:rgba(0,0,0,100);
+     }</string>
+       </property>
+       <property name="text">
+        <string>故障处理</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_stop">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>64</y>
+         <width>158</width>
+         <height>48</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">     QPushButton{
+     background-color:rgba(68,114,196);
+     border-style:outset;
+     border-width:4px;
+     border-radius:10px;
+     border-color:rgba(255,255,255,30);
+     font:bold 20px;
+     color:rgba(0,0,0,200);
+     padding:6px;
+     }
+
+     QPushButton:pressed{
+     background-color:rgba(68,114,196);
+     border-color:rgba(255,255,255,30);
+     border-style:inset;
+     color:rgba(0,0,0,200);
+     }
+
+     QPushButton:hover{
+     background-color:rgba(68,114,196);
+     border-color:rgba(255,255,255,200);
+     color:rgba(0,0,0,100);
+     }</string>
+       </property>
+       <property name="text">
+        <string>停机</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>571</width>
+        <height>291</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="widget_current">
+       <attribute name="title">
+        <string>电流</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="widget_voltage">
+       <attribute name="title">
+        <string>电压</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="widget_load">
+       <attribute name="title">
+        <string>负载</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="widget_temp">
+       <attribute name="title">
+        <string>温度</string>
+       </attribute>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="widget_alarm">
+     <widget class="QTableWidget" name="table_alarm">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>861</width>
+        <height>541</height>
+       </rect>
+      </property>
+      <property name="alternatingRowColors">
+       <bool>true</bool>
+      </property>
+      <property name="sortingEnabled">
+       <bool>false</bool>
+      </property>
+      <property name="rowCount">
+       <number>20</number>
+      </property>
+      <property name="columnCount">
+       <number>4</number>
+      </property>
+      <attribute name="horizontalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderCascadingSectionResizes">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>200</number>
+      </attribute>
+      <attribute name="horizontalHeaderHighlightSections">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderStretchLastSection">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderCascadingSectionResizes">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="verticalHeaderStretchLastSection">
+       <bool>false</bool>
+      </attribute>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column>
+       <property name="text">
+        <string>报警ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>报警地点</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>报警原因</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>处理状态</string>
+       </property>
+      </column>
+      <item row="0" column="0">
+       <property name="text">
+        <string>005</string>
+       </property>
+      </item>
+      <item row="0" column="1">
+       <property name="text">
+        <string>2区</string>
+       </property>
+      </item>
+      <item row="0" column="2">
+       <property name="text">
+        <string>短路</string>
+       </property>
+      </item>
+      <item row="0" column="3">
+       <property name="text">
+        <string>已处理</string>
+       </property>
+      </item>
+      <item row="1" column="0">
+       <property name="text">
+        <string>004</string>
+       </property>
+      </item>
+      <item row="1" column="1">
+       <property name="text">
+        <string>1区</string>
+       </property>
+      </item>
+      <item row="1" column="2">
+       <property name="text">
+        <string>停机</string>
+       </property>
+      </item>
+      <item row="1" column="3">
+       <property name="text">
+        <string>未处理</string>
+       </property>
+      </item>
+      <item row="2" column="0">
+       <property name="text">
+        <string>007</string>
+       </property>
+      </item>
+      <item row="2" column="1">
+       <property name="text">
+        <string>4区</string>
+       </property>
+      </item>
+      <item row="2" column="2">
+       <property name="text">
+        <string>未知</string>
+       </property>
+      </item>
+      <item row="2" column="3">
+       <property name="text">
+        <string>未处理</string>
+       </property>
+      </item>
+      <item row="3" column="0">
+       <property name="text">
+        <string>018</string>
+       </property>
+      </item>
+      <item row="3" column="1">
+       <property name="text">
+        <string>8区</string>
+       </property>
+      </item>
+      <item row="3" column="2">
+       <property name="text">
+        <string>未知</string>
+       </property>
+      </item>
+      <item row="3" column="3">
+       <property name="text">
+        <string>未处理</string>
+       </property>
+      </item>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="widget_video"/>
+    <widget class="QWidget" name="widget_online"/>
+    <widget class="QWidget" name="widget_check">
+     <property name="styleSheet">
+      <string notr="true">background-color:rgb(255, 255, 255);</string>
+     </property>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>921</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 10pt &quot;微软雅黑&quot;;
+background-color:rgb(212, 212, 212);</string>
+      </property>
+      <property name="text">
+       <string>当前待处理事项</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>50</y>
+        <width>531</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 18pt &quot;微软雅黑&quot;;
+color: rgb(47, 85, 151);
+background-color:none;
+</string>
+      </property>
+      <property name="text">
+       <string>当前需操作设备维修处理的记录数为2条</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>70</y>
+        <width>851</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 18pt &quot;微软雅黑&quot;;
+color: rgb(47, 85, 151);
+text-decoration:underline;
+background-color:none;
+
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>130</y>
+        <width>851</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 18pt &quot;微软雅黑&quot;;
+color: rgb(47, 85, 151);
+text-decoration:underline;
+background-color:none;
+
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>110</y>
+        <width>531</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 18pt &quot;微软雅黑&quot;;
+color: rgb(47, 85, 151);
+background-color:none;
+</string>
+      </property>
+      <property name="text">
+       <string>当前需操作设备维修处理的记录数为2条</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>170</y>
+        <width>531</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 18pt &quot;微软雅黑&quot;;
+color: rgb(47, 85, 151);
+background-color:none;
+</string>
+      </property>
+      <property name="text">
+       <string>当前需操作设备二级维护的记录数为1条</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>-20</x>
+        <y>190</y>
+        <width>851</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 18pt &quot;微软雅黑&quot;;
+color: rgb(47, 85, 151);
+text-decoration:underline;
+background-color:none;
+
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>-20</x>
+        <y>250</y>
+        <width>851</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 18pt &quot;微软雅黑&quot;;
+color: rgb(47, 85, 151);
+text-decoration:underline;
+background-color:none;
+
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>230</y>
+        <width>531</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 18pt &quot;微软雅黑&quot;;
+color: rgb(47, 85, 151);
+background-color:none;
+</string>
+      </property>
+      <property name="text">
+       <string>当前需操作设备润滑补油的记录数为1条</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QTreeWidget" name="widget_tree">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>100</y>
+      <width>151</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAsNeeded</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAsNeeded</enum>
+    </property>
+    <property name="textElideMode">
+     <enum>Qt::ElideRight</enum>
+    </property>
+    <property name="autoExpandDelay">
+     <number>0</number>
+    </property>
+    <property name="itemsExpandable">
+     <bool>true</bool>
+    </property>
+    <property name="allColumnsShowFocus">
+     <bool>true</bool>
+    </property>
+    <attribute name="headerCascadingSectionResizes">
+     <bool>false</bool>
+    </attribute>
+    <column>
+     <property name="text">
+      <string>电机在线检测</string>
+     </property>
+    </column>
+    <item>
+     <property name="text">
+      <string>1区</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>001</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>002</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>003</string>
+      </property>
+     </item>
+    </item>
+    <item>
+     <property name="text">
+      <string>2区</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>004</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>005</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>006</string>
+      </property>
+     </item>
+    </item>
+    <item>
+     <property name="text">
+      <string>3区</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>007</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>008</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>009</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>010</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>011</string>
+      </property>
+     </item>
+    </item>
+    <item>
+     <property name="text">
+      <string>4区</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>012</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>013</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>014</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>015</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>016</string>
+      </property>
+     </item>
+    </item>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="myResource.qrc"/>
+ </resources>
+ <connections/>
+</ui>
